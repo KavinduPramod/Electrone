@@ -1,33 +1,99 @@
-<section class="vh-100" style="background-color: #508bfc;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card shadow-2-strong" style="border-radius: 1rem;">
-            <center><div class="card-body p-5 text-center">
-                
-              <h1 class="mb-5">Rajida</h1>
-              <h3 class="mb-5">Sign in</h3>
-  
-              <div class="form-outline mb-4">
-                <label class="form-label" for="typeEmailX-2">Email</label></br>
-                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-                
-              </div>
-            </br>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="typePasswordX-2">Password</label></br>
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                
-              </div>
-              <br>
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-              
-              <hr class="my-4">
-  
-            </div></center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #508bfc;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      border-radius: 1rem;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .card-body {
+      padding: 2.5rem;
+    }
+
+    .card-body h1 {
+      color: #000;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-body h3 {
+      color: #000;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-outline {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      color: #000;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background-color: #2b6cb0;
+      color: #fff;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #1e4e8c;
+    }
+  </style>
+</head>
+<body>
+  <section class="vh-100">
+    <div class="container py-5">
+      <div class="card shadow-2-strong">
+        <div class="card-body text-center">
+          <h1 class="mb-4">Rajida</h1>
+          <h3 class="mb-4">Sign in</h3>
+          <div class="form-outline mb-4">
+            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email">
           </div>
+          <div class="form-outline mb-4">
+            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password">
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+          <hr class="my-4">
         </div>
       </div>
     </div>
   </section>
-
+</body>
+</html>

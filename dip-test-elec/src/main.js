@@ -1,11 +1,14 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow,Menu } = require('electron');
+
 
 let mainWindow;
 
+Menu.setApplicationMenu(null);
+
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
-        width: 400,
-        height: 300,
+        width: 800,
+        height: 600,
         webPreferences: {
             nodeIntegration: true
         }

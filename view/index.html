@@ -84,16 +84,49 @@
           <h1 class="mb-4">Rajida</h1>
           <h3 class="mb-4">Sign in</h3>
           <div class="form-outline mb-4">
-            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email">
+            <input type="text" id="username" class="form-control form-control-lg" placeholder="Username">
           </div>
           <div class="form-outline mb-4">
-            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password">
+            <input type="password" id="password" class="form-control form-control-lg" placeholder="Password">
           </div>
-          <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+          <button class="btn btn-primary btn-lg btn-block" type="button" onclick="login()">Login</button>
           <hr class="my-4">
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const data = {
+        user_name: username,
+        password: password
+      };
+
+      fetch('http://localhost:5000/login_admin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === "Login successful!") {
+          // Redirect to hero.html if login is successful
+          window.location.href = 'hero.html';
+        } else {
+          alert(result.message); // Display the error message if login fails
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred during login. Please try again later.');
+      });
+    }
+  </script>
 </body>
 </html>

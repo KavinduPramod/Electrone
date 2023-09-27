@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation bar styles */
+    .navbar {
+      background-color: #508bfc;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #1e4e8c;
+    }
+
+    /* Tab content container */
+    .tab-content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="#transactions" onclick="showTab('transactions'); return false;">Transactions</a>
+    <a href="#process" onclick="showTab('process'); return false;">Process</a>
+    <a href="#reports" onclick="showTab('reports'); return false;">Reports</a>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tab-content">
+    <div id="transactions">
+      <h2>Transactions</h2>
+      <p>This is the content for the Transactions tab.</p>
+    </div>
+
+    <div id="process" style="display: none;">
+      <h2>Process</h2>
+      <p>This is the content for the Process tab.</p>
+    </div>
+
+    <div id="reports" style="display: none;">
+      <h2>Reports</h2>
+      <p>This is the content for the Reports tab.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript to switch between tabs -->
+  <script>
+    function showTab(tabName) {
+      var tabs = document.querySelectorAll('.tab-content > div');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = 'none';
+      }
+      document.getElementById(tabName).style.display = 'block';
+    }
+
+    // Initially, show the first tab (Transactions)
+    showTab('transactions');
+  </script>
+</body>
+</html>
